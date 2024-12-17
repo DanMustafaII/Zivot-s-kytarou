@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+/* Tablet (šířka obrazovky menší než 1024px) */
+@media (max-width: 1024px) {
+    body {
+        max-width: 90%;
+        padding: 0 15px;
+    }
+}
+
+/* Mobil (šířka obrazovky menší než 600px) */
+@media (max-width: 600px) {
+    body {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+}
+
+body {
+    background-color: var(--first-color);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --first-color: #141414;
+    --second-color: #ffd700;
+    --third-color: #e5e5e5;
+}
+
+/* Stylování navigačního menu */
+#nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--first-color);
+    padding: 0.7rem;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+#nav a {
+    color: var(--third-color);
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+#nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+#nav ul li a {
+    padding: 0.75rem;
+    margin: 0 0.75rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+#nav ul li a:hover {
+    background-color: var(--second-color);
+    color: var(--primary-color);
+    box-shadow: 0px 5px 15px var(--third-color);
+    border-radius: 5px;
+}
+
+
+/* Stylování loga */
+#logo img {
+    margin-left: 40px;
+    height: 55px; 
+    width: auto; 
+    display: block;
+}
+
+/* stylování tlačíka */
+.btn {
+    display: inline-block;
+    color: var(--third-color);
+    text-decoration: none;
+    padding: 0.5rem 2rem;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 7px;
+    font-family: 'Kanit', sans-serif;
+    transition: transform 0.2s ease;
+}
+
+ .btn:hover {
+    color: var(--first-color);
+    background-color: var(--second-color);
+    transform: scale(1.03);
+ }
+
+ .btn-outline {
+    border: 2px solid var(--second-color);
+    margin-top: 5rem;
+ }
+
+/* Stylování textu */
+ .text {
+    flex: 1;
+    padding: 20px;
+    color: var(--third-color);
+    font-family: "Noto Sans", sans-serif;
+}
+
+.text h1 {
+    font-size: 36px;
+    margin-bottom: 15px;
+    color: var(--second-color);
+    font-family: "Noto Sans", sans-serif;
+}
+
+.text h2 {
+    font-size: 25px;
+    margin-bottom: 15px;
+    color: var(--second-color);
+    font-family: "Noto Sans", sans-serif;
+}
+
+.text p {
+    font-size: 25px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.text ul li {
+    font-size: 21px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+
+/* Obrázky - stylování */
+figure {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Popisek pod obrázkem */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+figure img {
+    width: 100vh;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.6s ease;
+}
+
+figure img:hover {
+    transform: scale(1.03); /* zvětšení při najetí myší */
+}
+
+figcaption {
+    margin-top: 8px; 
+    font-size: 25px;
+    color: var(--third-color);
+    font-style: italic; /* kurzíva */
+    text-align: center; 
+}
+
+/* Zápatí footer */
+#footer {
+    margin-top: 3rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    background: rgba(5, 5, 5, 0.395);
+    color: white;
+    text-align: center;
+}
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 2rem;
+    padding-top: 1rem;
+}
+
+
+
+/* Stylování showcase */
+#showcase {
+    background: #333 url('../IMG/polygon-group-2RKdUwOWbCU-unsplash.jpg') no-repeat center center/cover;
+    height: 110vh;
+}
+
+#showcase .showcase-content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 2rem;
+    background-color: rgba(0,0,0,.5);
+}
+
+#showcase-nadpis {
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    line-height: 1.1;
+    font-family: 'Kanit', sans-serif;  
+    color: var(--third-color);
+}
+
+/* Stylování úvodu */
+/* Stylování úvodu */
+/* Stylování úvodu */
+#uvod {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    padding: 20px;
+    padding-top: 6rem;
+    background-color: var(--first-color);
+}
+
+.video-player {
+    text-align: center;
+    margin-top: 20px;
+}
+
+video {
+    max-width: 100%; /* přizpůsobení šířce stránky */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Historie kytary */
+/* Historie kytary */
+/* Historie kytary */
+#historie {
+    padding: 20px;
+}
+
+#historie-uvod {
+    padding: 20rem;
+    padding-top: 10rem;
+    text-align: center;
+}
+
+#sekce-starovek {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    padding: 20px;
+    padding-top: 6rem;
+}
+
+#sekce-renesance {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    padding: 20px;
+    padding-top: 6rem;
+}
+
+#sekce-moderni {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    padding: 20px;
+    padding-top: 6rem;
+}
+
+
+/* Techniky hry */
+/* Techniky hry */
+/* Techniky hry */
+#technika {
+    padding: 20px;
+}
+
+#technika ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+#technika ul li {
+    margin-bottom: 10px;
+}
+
+#technika-uvod {
+    padding: 20rem;
+    padding-top: 10rem;
+    text-align: center;
+}
+
+#sekce-zaklad {
+    align-items: center;
+    padding: 20px;
+    padding-top: 6rem;
+}
+
+#sekce-pokrocile {
+    align-items: center;
+    padding: 20px;
+    padding-top: 6rem;
+}
+
+#sekce-specialni {
+    align-items: center;
+    padding: 20px;
+    padding-top: 6rem;
+}
+
+
+/* Sekce Vybavení */
+/* Sekce Vybavení */
+/* Sekce Vybavení */
+#vybaveni {
+    padding: 20px;
+}
+
+.equipment-section ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+    list-style: disc;
+}
+
+.equipment-section ul li {
+    margin-bottom: 10px;
+}
+
+#vybaveni-uvod {
+    padding: 20rem;
+    padding-top: 10rem;
+    text-align: center;
+}
+
+#sekce-kytary {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    padding: 20px;
+    padding-top: 6rem;
+    flex-direction: row-reverse;
+}
+
+#sekce-zesilovace {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    padding: 20px;
+    padding-top: 6rem;
+    flex-direction: row-reverse;
+}
+
+#sekce-efekty {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    padding: 20px;
+    padding-top: 6rem;
+    flex-direction: row-reverse;
+}
+
+#sekce-prislusenstvi {
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    padding: 20px;
+    padding-top: 6rem;
+    flex-direction: row-reverse;
+}
+
+
+/* tabulka */
+/* tabulka */
+/* tabulka */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+    table-layout: fixed;
+    word-wrap: break-word;
+}
+
+th, td {
+    border: 3px solid #ddd;
+    padding: 10px;
+    word-wrap: break-word;
+}
+
+th {
+    background-color: var(--first-color);
+    color: var(--second-color);
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f21c;
+}
+
+tr:hover {
+    background-color: var(--second-color);
+    color: var(--first-color);
+    font-weight: 600;
+
+}
+
+/* název tabulky */
+caption {
+    margin-top: 5rem;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
